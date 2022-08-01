@@ -6,3 +6,6 @@ imgflat python scripts take inimg.jpg(located in same folder, no args for now) a
 imgflat script is available in dither and non dither versions along with the ability to use Multi-processing by breaking up the image into 4 parts processed on 4 seperate processes.
 
 This img file is taken as an input by imgview.COM, it also supports auto centring, those black bars on the edges are not prerendered by imgflat script, IT IS CENTERED using asm code. :)
+
+Example Output:
+![Output](./Example-out.png)
