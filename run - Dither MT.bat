@@ -1,7 +1,7 @@
 @echo OFF
 setlocal EnableExtensions EnableDelayedExpansion
 if exist "C:\Program Files (x86)\" (
-  for /f "tokens=4" %%a in ('dir "C:\Program Files (x86)" /ad ^| findstr /i "Dosbox*"') do (
+  for /f "tokens=4" %%a in ('dir "C:\Program Files" /ad ^| findstr /i "Dosbox*"') do (
   set Dosver=%%a
 )
 ) else (
@@ -17,7 +17,9 @@ python imgflat-dither-MT.py
 Dosbox.exe imgview.com
 :DOSBOX_NOT_FOUND
 echo Please install Dosbox to run
+pause
 exit
 :PYTHON_DOES_NOT_EXIST
 echo Please Install Python to continue
+pause
 exit

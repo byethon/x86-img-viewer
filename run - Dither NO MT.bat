@@ -17,7 +17,9 @@ python imgflat-dither-no-MT.py
 Dosbox.exe imgview.com
 :DOSBOX_NOT_FOUND
 echo Please install Dosbox to run
+pause
 exit
 :PYTHON_DOES_NOT_EXIST
 echo Please Install Python to continue
+pause
 exit
