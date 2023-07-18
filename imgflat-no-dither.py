@@ -43,7 +43,7 @@ while(i!=0):
             k+=2
         if(img4[j][i][2]):
             k+=4
-        if(int(img4[j][i][0])>=avgr or int(img4[j][i][1])>=avgg or int(img4[j][i][2])>avgb):
+        if(((k in [0,1,3,5,7])*int(img4[j][i][0]) + (k in [0,2,3,6,7])*int(img4[j][i][1]) + (k in [0,4,5,6,7])*int(img4[j][i][2])) > ((k in [0,1,3,5,7])*avgr + (k in [0,2,3,6,7])*avgg + (k in [0,4,5,6,7])*avgb)):
             k+=8
         if(k<=9):
             imgfile.write(f'{k}')
