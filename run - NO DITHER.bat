@@ -15,6 +15,7 @@ if ERRORLEVEL 1 goto PYTHON_DOES_NOT_EXIST
 set PATH=%PATH%;C:\Program Files (x86)\%Dosver%
 python imgflat-no-dither.py
 Dosbox.exe imgview.com
+exit
 :DOSBOX_NOT_FOUND
 echo Please install Dosbox to run
 pause
