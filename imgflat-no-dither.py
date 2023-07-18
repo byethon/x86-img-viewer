@@ -29,6 +29,10 @@ ratio = np.amax(img) / 2
 img4 = (img / ratio).astype('uint8')
 img4 = (img4*255).astype('uint8')
 i=w-1
+avgr=np.average(np.transpose(img4)[0])
+avgg=np.average(np.transpose(img4)[1])
+avgb=np.average(np.transpose(img4)[2])
+print(f"{avgr},{avgg},{avgb}")
 while(i!=0):
     j=h-1
     while(j!=0):
@@ -39,7 +43,7 @@ while(i!=0):
             k+=2
         if(img4[j][i][2]):
             k+=4
-        if(int(img4[j][i][0])+int(img4[j][i][1])+int(img4[j][i][2])>255):
+        if(int(img4[j][i][0])>=avgr or int(img4[j][i][1])>=avgg or int(img4[j][i][2])>avgb):
             k+=8
         if(k<=9):
             imgfile.write(f'{k}')
